@@ -2,20 +2,21 @@
 
 int main()
 {
-    int n, rem, decimal = 0, base = 1;
+    int n, rem, binary = 0, place = 1;
 
-    printf("Enter a binary number: ");
+    printf("Enter a decimal number: ");
     scanf("%d", &n);
 
     while (n > 0)
     {
-        rem = n % 10;
-        decimal = decimal + rem * base;
-        base = base * 2;
-        n = n / 10;
+        rem = n % 2;
+        binary = binary + rem * place;
+        place = place * 10;
+        n = n / 2;
     }
 
-    printf("Decimal = %d", decimal);
+    printf("Binary number = %d", binary);
 
     return 0;
 }
+
